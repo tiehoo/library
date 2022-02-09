@@ -1,0 +1,14 @@
+# Make file of com: 
+SRL_STR_OBJ_DIR = ${SRL_STR_BAS_DIR}
+SRL_STR_INC_DIR = ${SRL_STR_BAS_DIR}
+
+# 
+SRL_STR_OBJS = ${SRL_STR_OBJ_DIR}/CBufferAnalyzer.o
+
+# Interface with makefile: 
+PROGS = 
+ALL_OBJS = ${SRL_STR_OBJS}
+
+# 
+INC_DIRS = -I${SRL_COM_BAS_DIR} -I${SRL_MEM_BAS_DIR}
+CFLAGS = ${INC_DIRS}

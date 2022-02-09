@@ -1,0 +1,14 @@
+#Make file of str: 
+SRL_THR_OBJ_DIR = ${SRL_THR_BAS_DIR}
+SRL_THR_INC_DIR = ${SRL_THR_OBJ_DIR}
+
+# 
+SRL_THR_OBJS =  ${SRL_THR_OBJ_DIR}/CMutex.o ${SRL_THR_OBJ_DIR}/CMutexLock.o ${SRL_THR_OBJ_DIR}/CCondition.o ${SRL_THR_OBJ_DIR}/CSemaphore.o \
+                ${SRL_THR_OBJ_DIR}/CThreadWorker.o
+
+# Interface with makefile: 
+PROGS = 
+ALL_OBJS = ${SRL_THR_OBJS}
+# 
+INC_DIRS = -I${SRL_COM_INC_DIR}
+CFLAGS =  -g -D _REENTRANT  ${INC_DIRS}

@@ -1,0 +1,13 @@
+#Make file of str:
+SRL_RAD_OBJ_DIR = ${SRL_RAD_BAS_DIR}
+SRL_RAD_INC_DIR = ${SRL_RAD_OBJ_DIR}
+
+# 
+SRL_RAD_OBJS = ${SRL_RAD_OBJ_DIR}/CRadiusPacket.o ${SRL_RAD_OBJ_DIR}/CRadiusClient.o
+
+# Interface with makefile: 
+PROGS = 
+ALL_OBJS = ${SRL_RAD_OBJS}
+# 
+INC_DIRS = -I${SRL_COM_INC_DIR} -I${SRL_NET_INC_DIR} -I${SRL_MEM_INC_DIR}
+CFLAGS =  -g -D _REENTRANT  ${INC_DIRS}

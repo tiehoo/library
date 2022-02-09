@@ -1,0 +1,21 @@
+# Make file of com:
+SRL_DBS_OBJ_DIR = ${SRL_DBS_BAS_DIR}
+SRL_DBS_INC_DIR = ${SRL_DBS_BAS_DIR}
+
+# 
+SRL_DBS_OBJS = ${SRL_DBS_OBJ_DIR}/CMysql.o
+
+# Interface with makefile:
+PROGS = 
+ALL_OBJS = ${SRL_DBS_OBJS}
+
+# Mysql library definitions: 
+#MYSQL_INC_DIR = /usr/local/include/mysql
+#MYSQL_INC_DIR = /usr/include/mysql
+# ln -s /usr/inlcude/mysql /usr/local/include/mysql
+#MYSQL_INC_DIR_LINUX = /usr/include/mysql
+#MYSQL_LDFLAGS = -L/usr/local/lib/mysql -lmysqlclient_r -lz -lcrypt -lm
+
+# 
+#INC_DIRS = -I${SRL_COM_INC_DIR} -I${MYSQL_INC_DIR}
+#CFLAGS =  -g ${REENTRANT_FLAG} ${INC_DIRS}

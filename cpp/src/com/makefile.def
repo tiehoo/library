@@ -1,0 +1,19 @@
+# Make file of com: 
+SRL_COM_OBJ_DIR = ${SRL_COM_BAS_DIR}
+SRL_COM_INC_DIR = ${SRL_COM_BAS_DIR}
+
+# 
+SRL_COM_OBJS = ${SRL_COM_OBJ_DIR}/CException.o ${SRL_COM_OBJ_DIR}/CLog.o \
+    ${SRL_COM_OBJ_DIR}/CRegularExpression.o \
+    ${SRL_COM_OBJ_DIR}/CUtility.o ${SRL_COM_OBJ_DIR}/CMd5.o\
+    ${SRL_COM_OBJ_DIR}/CValue.o \
+    ${SRL_COM_OBJ_DIR}/CErrorMap.o \
+    ${SRL_COM_OBJ_DIR}/CTimeInterval.o ${SRL_COM_OBJ_DIR}/CDateTime.o ${SRL_COM_OBJ_DIR}/CRecord.o ${SRL_COM_OBJ_DIR}/CXmlXPath.o
+
+# Interface with makefile: 
+PROGS = 
+ALL_OBJS = ${SRL_COM_OBJS}
+
+#
+INC_DIRS = 
+CFLAGS = ${INC_DIRS} -I/usr/include/libxml2 

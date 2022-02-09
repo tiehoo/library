@@ -1,0 +1,16 @@
+# Make file of com: 
+SRL_NET_OBJ_DIR = ${SRL_NET_BAS_DIR}
+SRL_NET_INC_DIR = ${SRL_NET_BAS_DIR}
+
+# 
+SRL_NET_OBJS = ${SRL_NET_OBJ_DIR}/CSocketAddress.o ${SRL_NET_OBJ_DIR}/CSocketAddressInet.o ${SRL_NET_OBJ_DIR}/CSocketAddressUnix.o \
+	${SRL_NET_OBJ_DIR}/CSocket.o ${SRL_NET_OBJ_DIR}/CSocketStream.o ${SRL_NET_OBJ_DIR}/CSocketDatagram.o \
+	${SRL_NET_OBJ_DIR}/CSocketPool.o ${SRL_NET_OBJ_DIR}/CCurl.o 
+
+# Interface with makefile:
+PROGS = 
+ALL_OBJS = ${SRL_NET_OBJS}
+
+# 
+INC_DIRS = -I${SRL_COM_BAS_DIR}
+CFLAGS = ${INC_DIRS}

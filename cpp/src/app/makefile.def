@@ -1,0 +1,14 @@
+# Make file of com: 
+SRL_APP_OBJ_DIR = ${SRL_APP_BAS_DIR}
+SRL_APP_INC_DIR = ${SRL_APP_BAS_DIR}
+
+# 
+SRL_APP_OBJS = ${SRL_APP_OBJ_DIR}/CFileIni.o ${SRL_APP_OBJ_DIR}/CAppParameter.o 
+
+# Interface with makefile: 
+PROGS = 
+ALL_OBJS = ${SRL_APP_OBJS}
+
+# 
+INC_DIRS = -I${SRL_COM_INC_DIR} -I${SRL_MEM_INC_DIR} -I${SRL_STR_INC_DIR}
+CFLAGS = ${INC_DIRS}

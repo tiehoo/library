@@ -1,0 +1,16 @@
+# Make file of com: 
+SRL_SIP_OBJ_DIR = ${SRL_SIP_BAS_DIR}
+SRL_SIP_INC_DIR = ${SRL_SIP_BAS_DIR}
+
+# 
+SRL_SIP_OBJS = ${SRL_SIP_OBJ_DIR}/CMessageBase.o ${SRL_SIP_OBJ_DIR}/CNameValuePair.o \
+    ${SRL_SIP_OBJ_DIR}/CSipHeader.o ${SRL_SIP_OBJ_DIR}/CSipStartLine.o \
+    ${SRL_SIP_OBJ_DIR}/CSipMessage.o
+
+# Interface with makefile: 
+PROGS = 
+ALL_OBJS = ${SRL_SIP_OBJS}
+
+# 
+INC_DIRS = -I${SRL_COM_BAS_DIR} -I${SRL_MEM_BAS_DIR} -I${SRL_STR_BAS_DIR}
+CFLAGS = ${INC_DIRS}

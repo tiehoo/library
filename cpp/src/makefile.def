@@ -1,0 +1,78 @@
+################################################################################
+# Global definitios: 
+################################################################################
+# libxml2
+LIBXML2_INC_FLAG = -I/usr/include/libxml2
+LIBXML2_LDFLAG = -lxml2
+
+# curl
+CURL_LDFLAG = -lcurl
+
+# mysql 
+MYSQL_INC_FLAG = -I/usr/include/mysql
+MYSQL_LDFLAGS = -L/usr/lib64/mysql -lmysqlclient_r -lz -lcrypt -lm
+#MYSQL_LDFLAGS = -L/usr/local/lib/mysql -lmysqlclient -lpthread
+
+# pthread: 
+REENTRANT_FLAG = -D _REENTRANT
+PTHREAD_LDFLAG = -lpthread
+
+# 
+SRL_BAS_DIR = /home/tie/repo/library/cpp/src
+
+# All lib base directories: 
+SRL_COM_BAS_DIR = ${SRL_BAS_DIR}/com
+SRL_APP_BAS_DIR = ${SRL_BAS_DIR}/app
+SRL_DBS_BAS_DIR = ${SRL_BAS_DIR}/dbs
+SRL_THR_BAS_DIR = ${SRL_BAS_DIR}/thr
+SRL_NET_BAS_DIR = ${SRL_BAS_DIR}/net
+SRL_MEM_BAS_DIR = ${SRL_BAS_DIR}/mem
+SRL_STR_BAS_DIR = ${SRL_BAS_DIR}/str
+SRL_RAD_BAS_DIR = ${SRL_BAS_DIR}/rad
+SRL_SIP_BAS_DIR = ${SRL_BAS_DIR}/sip
+#SRL_TYP_BAS_DIR = ${SRL_BAS_DIR}/typ
+#SRL_CRY_BAS_DIR = ${SRL_BAS_DIR}/cry
+#SRL_IMF_BAS_DIR = ${SRL_BAS_DIR}/imf
+#SRL_SDP_BAS_DIR = ${SRL_BAS_DIR}/sdp
+#SRL_UTI_BAS_DIR = ${SRL_BAS_DIR}/uti
+#SRL_DEV_BAS_DIR = ${SRL_BAS_DIR}/dev
+#SRL_APP_BAS_DIR = ${SRL_BAS_DIR}/app
+#SRL_IPC_BAS_DIR = ${SRL_BAS_DIR}/ipc
+
+# Include all definition files: 
+include ${SRL_COM_BAS_DIR}/makefile.def
+include ${SRL_APP_BAS_DIR}/makefile.def
+include ${SRL_DBS_BAS_DIR}/makefile.def
+include ${SRL_THR_BAS_DIR}/makefile.def
+include ${SRL_NET_BAS_DIR}/makefile.def
+include ${SRL_MEM_BAS_DIR}/makefile.def
+include ${SRL_STR_BAS_DIR}/makefile.def
+include ${SRL_RAD_BAS_DIR}/makefile.def
+include ${SRL_SIP_BAS_DIR}/makefile.def
+#include ${SRL_TYP_BAS_DIR}/makefile.def
+#include ${SRL_CRY_BAS_DIR}/makefile.def
+#include ${SRL_IMF_BAS_DIR}/makefile.def
+#include ${SRL_SDP_BAS_DIR}/makefile.def
+#include ${SRL_UTI_BAS_DIR}/makefile.def
+#include ${SRL_DEV_BAS_DIR}/makefile.def
+#include ${SRL_APP_BAS_DIR}/makefile.def
+#include ${SRL_IPC_BAS_DIR}/makefile.def
+
+# Lib flags and objects: 
+SRL_INC_FLAG = -I${SRL_COM_BAS_DIR} -I${SRL_MEM_BAS_DIR} \
+    -I${SRL_NET_BAS_DIR} -I${SRL_STR_BAS_DIR} -I${SRL_DBS_BAS_DIR} -I${SRL_APP_BAS_DIR} -I${SRL_SIP_BAS_DIR} -I${SRL_THR_INC_DIR} 
+
+#    -I${SRL_UTI_BAS_DIR} -I$(SRL_SIP_BAS_DIR) -I$(SRL_RAD_BAS_DIR)  -I${SRL_DBS_BAS_DIR} \
+#    -I${SRL_IMF_BAS_DIR} -I${SRL_SDP_BAS_DIR} -I${SRL_SIP_BAS_DIR} \
+#    -I${MYSQL_INC_DIR} 
+SRL_ALL_OBJS = ${SRL_COM_OBJS} ${SRL_NET_OBJS} ${SRL_MEM_OBJS} ${SRL_STR_OBJS} ${SRL_APP_OBJS} ${SRL_SIP_OBJS} ${SRL_RAD_OBJS}
+
+# 
+CC = g++
+LD = ${CC}
+
+CFLAGS = -I/usr/include ${LIBXML2_INC_FLAG} ${MYSQL_INC_FLAG} ${SRL_INC_FLAG} ${REENTRANT_FLAG} -O2
+LDFLAGS = -L/usr/local/lib ${LIBXML2_LDFLAG} ${CURL_LDFLAG} ${MYSQL_LDFLAG}
+#LDFLAGS = -L/usr/local/lib
+#LDFLAGS = -L/usr/local/lib -L/usr/local/lib/mysql -lmysqlpp -lmysqlclient -lpq -lpthread
+#LDFLAGS = -L/usr/local/lib -L/usr/local/lib/mysql -lmysqlclient -lpthread

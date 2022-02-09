@@ -1,0 +1,14 @@
+# Make file of com: 
+SRL_MEM_OBJ_DIR = ${SRL_MEM_BAS_DIR}
+SRL_MEM_INC_DIR = ${SRL_MEM_BAS_DIR}
+
+# 
+SRL_MEM_OBJS = ${SRL_MEM_OBJ_DIR}/CBufferFrame.o ${SRL_MEM_OBJ_DIR}/CBuffer.o
+
+# Interface with makefile: 
+PROGS = 
+ALL_OBJS = ${SRL_MEM_OBJS}
+
+# 
+INC_DIRS = -I${SRL_COM_BAS_DIR}
+CFLAGS = ${INC_DIRS}
